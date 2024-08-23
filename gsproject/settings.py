@@ -15,6 +15,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['grihasree2.onrender.com', '127.0.0.1', 'localhost']
 ALLOWED_HOSTS = ['*']
+print(ALLOWED_HOSTS)
 
 
 
