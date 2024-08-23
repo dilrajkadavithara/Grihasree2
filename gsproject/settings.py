@@ -16,7 +16,7 @@ SECRET_KEY = 'django-insecure-43e=y$p%0)z=gtb=(5_3hvsgmq7g&(cpk6u&1bp*0bl$fx+ouy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['grihasree2.onrender.com']
 
 
 
