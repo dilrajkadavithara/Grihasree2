@@ -1,0 +1,42 @@
+# Python and Django
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment 
+gsenv/
+venv/
+virtualenv/
+
+# Database
+*.sqlite3
+*.db
+
+# Static and Media
+static_root/
+media_root/
+
+# IDE and Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs and Temporary
+*.log
+*.pot
+*.mo
+*.pyc
+*.pyo
+
+# Django Specific
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+migrations/
+
+# Other
+.env
+*.DS_Store
+*.sublime-project
+*.sublime-workspace

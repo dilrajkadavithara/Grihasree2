@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Grihasree - Expert Plumbers, Electricians & Home Services in Kerala</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get expert home services in Kerala with Grihasree! Contact us today!">
+    <meta name="keywords" content="home services Kerala, plumbers in Kerala, electricians in Kerala, home maintenance, plumbing services, electrical services, home repair">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="author" content="Dilraj K R, Pradhama IT Services">
+    <meta name="copyright" content="2023 Pradhama IT Services. All rights reserved.">
+    <meta property="og:title" content="Grihasree - Expert Home Services in Kerala">
+    <meta property="og:description" content="Get reliable home services in Kerala with Grihasree. Our experienced plumbers and electricians provide top-notch solutions for all your home needs.">
+    <meta property="og:image" content="https://www.grihasree.com/grihasree_logo.jpg">
+    <meta property="og:url" content="https://www.grihasree.com">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://www.grihasree.com/">
+    <meta name="generator" content="Custom built by Pradhama IT Services using HTML, CSS, JavaScript, and Python">
+    <link rel="icon" href="/static/src/images/favicon.ico">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  
+<nav class="navbar">
+    <div class="logo">
+        <a href="#"><img src="{% static 'src/images/grihasree_logo.jpg' %}" alt="Grihasree Logo - Your Trusted Partner for Home Services"></a>
+    </div>
+    <button class="hamburger" id="hamburger">
+        &#9776;
+    </button>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about-us-section">About Us</a></li>
+        <li><a href="#services-heading">Services</a></li>
+        <li><a href="#footer">Contact Us</a></li>
+    </ul>
+</nav>
+<!-- Section 2................................................. -->
+
+    <div class="section-container">
+        <div class="banner">
+            <a href="#"><img src="{% static 'src/images/plumbers_and_electricians_kerala.jpg' %}" alt="Reliable Plumbers and Electricians in Kerala - Grihasree"></a>
+        </div>
+        <div class="form-container">
+          <h2 id="form-header">Get a Service</h2>
+          <form id="service-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" autocomplete="name"  >
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone_number" autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="district-dropdown">District:</label>
+              <select id="district-dropdown" name="district">
+                  <option value="">Select District</option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label for="local-area-dropdown">Local Area:</label>
+              <select id="local-area-dropdown" name="local_area">
+                  <option value="">Select Local Area</option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label for="services-dropdown">Services Required:</label>
+              <select id="services-dropdown" name="service">
+                  <option value="">Select Service</option>
+              </select>
+          </div>
+          
+            <button type="submit">Submit</button>
+            
+        </form>
+        <div id="error-messages"></div>
+        
+        </div>
+    </div>
+    {% comment %} Third Section.......................... {% endcomment %}
+    <div id="about-us-section" class="about-us-section">
+        <div class="container">
+          <h1 class="section-title">About Grihasree - Reliable Electrical and Plumbing Solutions</h1>
+          <p class="section-description">Your trusted partner for fast and reliable <strong>electrical</strong> and <strong>plumbing services</strong> in Kerala.</p>
+          <p class="section-description">We understand the frustration of delayed services and its impact on daily life. That's why we're dedicated to providing timely solutions for homeowners and building owners across Kerala.</p>
+          <p class="section-description">Our innovative platform connects you directly with certified, experienced local <strong>electricians</strong> and <strong>plumbers</strong>, ensuring prompt assistance for routine maintenance, urgent repairs, and everything in between.</p>
+          <p class="section-description">With our system, we quickly identify available professionals in your area, reducing wait times and delivering quality solutions exactly when you need them.</p>
+          <p class="section-description">At Grihasree, we guarantee dependable <strong>electrical</strong> and <strong>plumbing services</strong> with a focus on customer satisfaction. By partnering with local vendors, we contribute to the local economy, empowering skilled professionals and building stronger communities.</p>
+          <p class="section-description">Our goal is to make your life easier by bringing expert help to your doorstep, ensuring your electrical and plumbing needs are met efficiently and effectively.</p>
+        </div>
+      </div>
+      
+      {% comment %} fourth section.............................. {% endcomment %}
+      <div class="services-heading">
+        <h1 id="services-heading">Home Maintenance Solutions - Electrical, Plumbing, and More"
+        </h1>
+      </div>
+      <div id="services-section" class="services-section">
+        
+        <div class="service-card">
+            <img src="{% static 'src/images/plumbing_solutions_kerala.jpg' %}" alt="Efficient Plumbing Solutions in Kerala - Grihasree">
+            <h2>Plumbing Service</h2>
+            <p>Experience seamless water flow with our expert <strong>plumbing services</strong>. From detecting and fixing hidden leaks to installing new, durable pipes, our professionals ensure your home's water system operates efficiently. Count on us for <strong>reliable</strong>, <strong>prompt</strong>, and high-quality <strong>plumbing solutions</strong> in Kerala.</p>
+        </div>
+        <div class="service-card">
+            <img src="{% static 'src/images/electrical_services_kerala.jpg' %}" alt="Expert Electrical Services in Kerala - Grihasree">
+            <h2>Electrical Repair Service</h2>
+            <p>Ensure your home's safety and uninterrupted power supply with our expert <strong>electrical repair services</strong>. Our experienced <strong>electricians</strong> in Kerala handle everything from identifying and fixing faulty wiring to complete electrical installations. Trust us for <strong>safe</strong>, <strong>efficient</strong>, and high-quality <strong>electrical work</strong>, guaranteeing your peace of mind.</p>
+        </div>
+    </div>
+    {% comment %} foooter section................................ {% endcomment %}
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="{% static 'src/images/grihasree_logo.jpg' %}" alt="Grihasree Logo - Your Trusted Partner for Home Services" />
+          </div>
+          <h2>Contact Us</h2>
+          <div class="footer-contact">
+            <p>Pradhama IT Services</p>
+            <p>Sreemadiram Buildings, Udayamperoor P O,</p>
+            <p>Ernakulam, Kerala, 682307</p>
+            <p>Phone: <a href="tel:+916238804932">6238804932</a></p>
+          </div>
+          <div class="footer-ownership">
+            <p>&copy; 2024 Pradhama IT Services. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+   
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
+
+
+    

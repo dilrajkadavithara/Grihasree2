@@ -1,0 +1,456 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.logo{
+  display: flex; /* Align children (img) */
+  justify-content: flex-start; /* Start alignment for larger screens */
+}
+
+.logo img {
+  height: 100px;
+}
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+
+.nav-links li {
+  padding: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #EB6D10;
+  font-size: 25px;
+  font-style: italic;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+/* section 2...................................... */
+
+.section-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-left: 5px;
+}
+
+/* Typography */
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 42px;
+  color: #EB6D10;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 20px;
+}
+.banner {
+  width: 70%; /* 7/10th of the section */
+}
+
+#form-header{
+  color: #EB6D10;
+  text-align: center;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+
+/* Optional: Add styles for internal form elements here */
+
+.form-container {
+  width: 30%; /* Remaining 3/10th of the section */
+  height: 100%;
+  background: white;
+  max-width: 600px; /* Limit the form width for better aesthetics on large screens */
+  box-shadow: 0 0 25px rgba(0,0,0,0.1); /* Subtle shadow for some depth */
+  border-radius: 8px; /* Rounded corners */
+  max-height: 480px;
+  padding: 10px 25px; 
+  margin-right: 20px;
+}
+
+/* Form Styles */
+#service-form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block; /* Ensure the label is above the input */
+  font-size: 16px;
+}
+
+input[type="text"],
+input[type="tel"],
+select {
+  width: 100%; /* Full width of the form-group container */
+  padding: 12px;
+  font-size: 16px; /* Larger font size for better readability */
+  border: 1px solid #ccc; /* Subtle border */
+  border-radius: 8px; /* Softer corners for aesthetics */
+}
+
+button {
+  background-color: #EB6D10; 
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 20px; /* Larger font for button text */
+  padding: 12px 20px; /* More padding for a better click area */  
+}
+
+button:hover {
+  background-color: blue;
+}
+
+
+
+
+.about-us-section{
+margin: auto;
+padding: 20px;
+width: 100%;
+}
+.section-title {
+  margin-top: 0 px;
+  font-size: 30px;
+}
+
+.section-description {
+font-size: 16px;
+line-height: 1.6;
+padding: 0 20px;
+}
+/* Third section............................ */
+/* Base Container Styles */
+.about-us-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+/* Fourth Section...................................
+........................................................................................................ */
+.services-heading h1{
+  margin-top: 0 px;
+  font-size: 30px;
+  text-align: center;
+  color: #EB6D10;
+}
+.services-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.service-card {
+  background-color: #fff;
+  border: 5px solid #EB6D10;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px #EB6D10(0, 0, 0, 0.5);
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  max-width: 48%; /* Set to 48% so two cards can sit side by side 
+  */
+  margin: 10px;
+}
+
+.service-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #EB6D10;
+  margin-bottom: 15px;
+}
+
+.service-card h2 {
+  color: #EB6D10;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 20px;
+  color: #333;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding: 0 10px;
+}
+
+/* foooter section main.............................. */
+
+/* Footer Styles */
+.footer {
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+  text-align: center;
+  color: #333;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo img {
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.footer h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  color: #EB6D10;
+  margin-bottom: 20px;
+}
+
+.footer-contact p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.footer-contact a {
+  color: #EB6D10;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+
+.footer-ownership p{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  margin-top: 30px;
+  color: #666;
+}
+/* Styles for screens smaller than laptop sizes */
+@media (max-width: 1024px) {
+  .hamburger {
+      margin-top: 60px;
+      display: block;
+      position: absolute;
+  }
+
+  .logo {
+    justify-content: center; /* Center alignment for mobile */
+    width: 100%; /* Ensure the container takes full width */
+}
+  .logo img {
+    height: 65px;
+  }
+  .nav-links {
+      position: absolute;
+      right: 0;
+      top: 58px; /* Adjust based on your navbar height */
+      background-color: #fff;
+      flex-direction: column;
+      width: 100%;
+      display: none;
+      transition: all 0.3s ease;
+  }
+
+  .nav-links.active {
+      display: block;
+  }
+
+  .section-container{
+    display: block;
+    width: 100%;
+    margin: 60px auto;
+    flex-direction: row;
+
+  }
+  .banner {
+    width: 100%; /* Ensure the banner fills the container */
+    display: block; /* Stack the banner */
+    overflow: hidden; /* Prevents any overflow issues */
+    padding: 0; /* Adjust padding to ensure it fits well */
+    margin: 0; /* Remove any margin to utilize full width */
+    height: auto;
+  }
+
+  .banner img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    /* display: block;  */
+  }
+  .form-container {
+  width: 100%;
+  }
+  .services-section {
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensure the services section takes up full width */
+    padding: 0 10px;
+    margin: 0 auto;
+    border: 1px solid black;
+  }
+
+  .service-card {
+    width: 100%; 
+    margin-bottom: 20px; /* Add space between stacked cards */
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .footer {
+    padding: 20px 5px;
+  }
+
+  .footer h2 {
+    font-size: 22px;
+  }
+
+  .footer-contact p {
+    font-size: 14px;
+  }
+
+  .footer-ownership p{
+    font-size: 14px;
+  }
+
+  .footer-logo img {
+    height: 70px;
+  }
+}
+
+
+  
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 30px;
+    }
+  
+    .section-description {
+      font-size: 14px;
+    }
+    
+    .services-section{
+      padding: 10px 15px;
+    }
+    .service-card {
+      padding: 20px;
+    }
+    .service-card p {
+      padding: 0 15px; /* Increase text padding for better readability on smaller screens */
+    }
+
+  }
+  
+
+
+/* For Success Page--------- */
+
+/* Assuming existing .btn and .container classes */
+.success-container {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f0f4f8; /* Light grey background for the entire page */
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-logo {
+  width: 600px; /* Adjust size accordingly */
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #4CAF50; /* Soft green, similar to your example */
+  font-size: 7.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #666; /* Soft text color */
+  margin-bottom: 20px;
+  font-size: 3rem;
+}
+
+.btn-primary {
+  background-color: #007BFF; /* Bright blue button */
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.contact-text {
+  font-size: 2rem;
+  color: #333;
+}
+
+
+  .success-container {
+      padding: 30px 10px; /* Reduce padding */
+      flex-direction: column; /* Stack elements vertically */
+      justify-content: center;
+      align-items: center;
+  }
+
+  .success-logo {
+      width: 50%; /* Reduce logo size */
+      margin-bottom: 20px;
+  }
+
+  h1 {
+      font-size: 4rem; /* Reduce font size for the main title */
+      margin-bottom: 5px;
+  }
+
+  p {
+      font-size: 2rem; /* Reduce font size for paragraph */
+      margin-bottom: 10px;
+  }
+
+  .btn-primary {
+      padding: 8px 16px; /* Smaller padding */
+      font-size: 1.5rem; /* Smaller button text */
+  }
+
+  
+
+
