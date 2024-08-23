@@ -65,16 +65,10 @@ WSGI_APPLICATION = 'gsproject.wsgi.application'
 
 
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL'),  # This will be set in Render
-        conn_max_age=600  # Optional: keep connections open for 10 minutes
-    )
-}
+DATABASE_URL = os.environ['DATABASE_URL']
+db_from_env = dj_database_url.config(default=DATABASE_URL, conn_max_age=500)
+DATABASES = {'default': db_from_env}
 
-
-# Password validation
-# https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
