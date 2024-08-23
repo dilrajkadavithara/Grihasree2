@@ -1,7 +1,8 @@
 
 
 from pathlib import Path
-
+import os
+import dj_database_url
 
 
 
@@ -66,16 +67,11 @@ WSGI_APPLICATION = 'gsproject.wsgi.application'
 
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gsdatabase',  # Your database name
-        'USER': 'postgres',  # Your PostgreSQL username
-        'PASSWORD': 'Peeku123',  # Your PostgreSQL password
-        'HOST': 'localhost',  # Set to localhost if running on local machine
-        'PORT': '5432',  # Default PostgreSQL port
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL'),  # This will be set in Render
+        conn_max_age=600  # Optional: keep connections open for 10 minutes
+    )
 }
-
 
 
 # Password validation
