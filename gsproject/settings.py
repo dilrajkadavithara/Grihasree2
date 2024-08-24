@@ -31,7 +31,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'gsapp',
     'django_extensions',
-    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
