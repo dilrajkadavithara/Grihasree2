@@ -114,7 +114,7 @@ select {
 }
 
 #local-area-dropdown {
-  max-height: 50px; /* Set a maximum height */
+  height: 50px; /* Set a maximum height */
   overflow-y: auto;  /* Enable vertical scrolling */
   width: 100%;       /* Ensure it fits within the dropdown container */
 }
