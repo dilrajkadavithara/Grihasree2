@@ -79,7 +79,7 @@
 
 .form-container {
   width: 30%; /* Remaining 3/10th of the section */
-  height: 100%;
+  /* height: 100%; */
   background: white;
   max-width: 600px; /* Limit the form width for better aesthetics on large screens */
   box-shadow: 0 0 25px rgba(0,0,0,0.1); /* Subtle shadow for some depth */
@@ -114,7 +114,7 @@ select {
 }
 
 #local-area-dropdown {
-  max-height: 200px; /* Set a maximum height */
+  max-height: 50px !important; /* Set a maximum height */
   overflow-y: auto;  /* Enable vertical scrolling */
   width: 100%;       /* Ensure it fits within the dropdown container */
 }
