@@ -113,6 +113,12 @@ select {
   border-radius: 8px; /* Softer corners for aesthetics */
 }
 
+#local-area-dropdown {
+  max-height: 200px; /* Set a maximum height */
+  overflow-y: auto;  /* Enable vertical scrolling */
+  width: 100%;       /* Ensure it fits within the dropdown container */
+}
+
 button {
   background-color: #EB6D10; 
   color: white;
