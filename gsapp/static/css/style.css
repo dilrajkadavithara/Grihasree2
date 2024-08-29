@@ -79,7 +79,6 @@
 
 .form-container {
   width: 30%; /* Remaining 3/10th of the section */
-  /* height: 100%; */
   background: white;
   max-width: 600px; /* Limit the form width for better aesthetics on large screens */
   box-shadow: 0 0 25px rgba(0,0,0,0.1); /* Subtle shadow for some depth */
