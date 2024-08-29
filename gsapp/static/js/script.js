@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const phoneInput = document.getElementById('phone');
   const errorMessages = document.getElementById('error-messages');
 
-  document.querySelector('#local-area-dropdown').style.height = '50px';
 
   // Fetch districts data
   fetch('/api/districts/')
