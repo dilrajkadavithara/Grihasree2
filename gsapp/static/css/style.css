@@ -118,7 +118,10 @@ select {
   overflow-y: auto;  /* Enable vertical scrolling */
   width: 100%;       /* Ensure it fits within the dropdown container */
 }
-
+#local-area-dropdown, #local-area-dropdown + .dropdown-list {
+  max-height: 50px;
+  overflow-y: auto;
+}
 button {
   background-color: #EB6D10; 
   color: white;
