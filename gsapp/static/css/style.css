@@ -114,9 +114,24 @@ select {
 }
 
 #local-area-dropdown {
-  height: 50px !important; /* Set a maximum height */
-  overflow-y: auto;  /* Enable vertical scrolling */
-  width: 100%;       /* Ensure it fits within the dropdown container */
+  height: 50px !important;
+  max-height: 50px !important;
+  min-height: 50px !important;
+  width: 100% !important;
+  padding: 0 12px !important; /* Adjust padding as needed */
+  font-size: 16px !important;
+  line-height: 50px !important; /* Match the height for vertical centering */
+  border: 1px solid #ccc !important;
+  border-radius: 8px !important;
+  background-color: white !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
+/* Ensure the container doesn't restrict the dropdown */
+.form-group {
+  min-height: 70px; /* Adjust if needed to accommodate label and dropdown */
 }
 
 button {
