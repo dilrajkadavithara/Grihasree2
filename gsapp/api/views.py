@@ -6,6 +6,7 @@ from gsapp.models import LocalArea,Service,District,Lead
 from rest_framework import status
 from django.db import OperationalError
 
+
 import logging
 
 logger = logging.getLogger(__name__)
@@ -64,4 +65,5 @@ class SubmitLeadView(APIView):
                 return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:
             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
 
