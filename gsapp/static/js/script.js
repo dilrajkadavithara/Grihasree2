@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const phoneInput = document.getElementById('phone');
   const errorMessages = document.getElementById('error-messages');
 
-
   // Fetch districts data
   fetch('/api/districts/')
     .then(response => response.json())
@@ -56,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
-    console.log('Data to be sent:', data);  // Log the data to be sent
+    console.log('Data to be sent:', data);
 
     // Reset error messages and styles
     errorMessages.innerHTML = '';

@@ -1,0 +1,19 @@
+<!-- gsapp/templates/gsapp/local_area_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Area List</title>
+</head>
+<body>
+    <h1>Local Areas</h1>
+    <ul>
+        {% for local_area in local_areas %}
+            <li>
+                <a href="{{ local_area.get_absolute_url }}">{{ local_area.local_area_name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

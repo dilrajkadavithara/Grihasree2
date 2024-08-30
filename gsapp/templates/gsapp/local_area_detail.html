@@ -1,0 +1,14 @@
+<!-- gsapp/templates/gsapp/local_area_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ local_area.local_area_name }} - Details</title>
+</head>
+<body>
+    <h1>{{ local_area.local_area_name }}</h1>
+    <p>Local Area ID: {{ local_area.local_area_id }}</p>
+    <p>District: <a href="{{ local_area.district.get_absolute_url }}">{{ local_area.district.district_name }}</a></p>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!-- gsapp/templates/gsapp/lead_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ lead.name }} - Details</title>
+</head>
+<body>
+    <h1>{{ lead.name }}</h1>
+    <p>Phone Number: {{ lead.phone_number }}</p>
+    <p>Service: <a href="{{ lead.service.get_absolute_url }}">{{ lead.service.service_name }}</a></p>
+    <p>District: <a href="{{ lead.district.get_absolute_url }}">{{ lead.district.district_name }}</a></p>
+    <p>Local Area: <a href="{{ lead.local_area.get_absolute_url }}">{{ lead.local_area.local_area_name }}</a></p>
+    <p>Created At: {{ lead.created_at }}</p>
+</body>
+</html>

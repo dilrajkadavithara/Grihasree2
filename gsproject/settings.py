@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-43e=y$p%0)z=gtb=(5_3hvsgmq7g&(cpk6u&1bp*0bl$fx+ouy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['grihasree2.onrender.com', '127.0.0.1', 'localhost']
 ALLOWED_HOSTS = ['*']
@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'gsapp',
     'django_extensions',
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [
