@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import LeadViewSet,LocalAreaListView,sitemap_view,ServiceListView,DistrictListView,SubmitLeadView
+from .views import LeadViewSet,LocalAreaListView,ServiceListView,DistrictListView,SubmitLeadView
 
 app_name = 'api'
 
