@@ -5,6 +5,7 @@ from .serializers import LocalAreaSerializer, ServiceSerializer, DistrictSeriali
 from gsapp.models import LocalArea, Service, District, Lead
 from rest_framework import status
 from django.db import OperationalError
+
 from django.views.generic import DetailView
 
 import logging
@@ -76,3 +77,4 @@ class LeadDetailView(DetailView):
     model = Lead
     template_name = 'lead_detail.html'
     context_object_name = 'lead'
+
