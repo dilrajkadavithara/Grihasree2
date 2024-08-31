@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
-    console.log('Data to be sent:', data);  // Log the data to be sent
+    console.log('Data to be sent:', data);
 
     // Reset error messages and styles
     errorMessages.innerHTML = '';
@@ -175,4 +175,3 @@ document.addEventListener('DOMContentLoaded', function() {
     return csrfToken;
   }
 });
-
