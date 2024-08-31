@@ -44,17 +44,18 @@ class DistrictAPIListView(APIView):
 
 class SubmitLeadView(APIView):
     def post(self, request):
-        print("Received data:", request.data)
+        logger.debug("Received data:", request.data)
         serializer = LeadSerializer(data=request.data)
         try:
             if serializer.is_valid():
                 serializer.save()
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
             else:
-                print("Data Received: ", request.data)
-                print("Errors: ", serializer.errors)
+                logger.debug("Data Received: ", request.data)
+                logger.debug("Errors: ", serializer.errors)
                 return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:
+            logger.exception("Failed to submit lead")
             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 # Detail Views (render HTML templates)
