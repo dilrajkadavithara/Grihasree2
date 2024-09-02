@@ -82,10 +82,12 @@
   background: white;
   max-width: 600px; /* Limit the form width for better aesthetics on large screens */
   box-shadow: 0 0 25px rgba(0,0,0,0.1); /* Subtle shadow for some depth */
-  border-radius: 8px; /* Rounded corners */
+  border: 2px solid #EB6D10 ;
+  border-radius: 8px; 
   max-height: 480px;
   padding: 10px 25px; 
   margin-right: 20px;
+  overflow: hidden;
 }
 
 /* Form Styles */

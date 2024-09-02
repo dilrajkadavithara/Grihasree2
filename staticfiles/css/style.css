@@ -28,7 +28,7 @@
 }
 
 .nav-links a {
-  text-decoration: none;
+  /* text-decoration: none; */
   color: #EB6D10;
   font-size: 25px;
   font-style: italic;
@@ -79,14 +79,15 @@
 
 .form-container {
   width: 30%; /* Remaining 3/10th of the section */
-  height: 100%;
   background: white;
   max-width: 600px; /* Limit the form width for better aesthetics on large screens */
   box-shadow: 0 0 25px rgba(0,0,0,0.1); /* Subtle shadow for some depth */
-  border-radius: 8px; /* Rounded corners */
+  border: 2px solid #EB6D10 ;
+  border-radius: 8px; 
   max-height: 480px;
   padding: 10px 25px; 
   margin-right: 20px;
+  overflow: hidden;
 }
 
 /* Form Styles */
@@ -113,7 +114,16 @@ select {
   border-radius: 8px; /* Softer corners for aesthetics */
 }
 
+#local-area-dropdown {
+  max-height: 50px !important; /* Set a maximum height */
+  overflow-y: auto;  /* Enable vertical scrolling */
+  width: 100%;       /* Ensure it fits within the dropdown container */
+}
 
+/* Ensure the container doesn't restrict the dropdown */
+.form-group {
+  min-height: 70px; /* Adjust if needed to accommodate label and dropdown */
+}
 
 button {
   background-color: #EB6D10; 
@@ -129,9 +139,6 @@ button {
 button:hover {
   background-color: blue;
 }
-
-
-
 
 .about-us-section{
 margin: auto;
