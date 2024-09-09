@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'gsapp',
     'django_extensions',
     'django.contrib.sitemaps',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -43,8 +44,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
 
+MIDDLEWARE.insert(2, 'corsheaders.middleware.CorsMiddleware')
+CORS_ALLOW_ALL_ORIGINS = True
 ROOT_URLCONF = 'gsproject.urls'
 
 TEMPLATES = [
