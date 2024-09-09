@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-43e=y$p%0)z=gtb=(5_3hvsgmq7g&(cpk6u&1bp*0bl$fx+ouy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+DEBUG = False
 
 ALLOWED_HOSTS = ['grihasree2.onrender.com', '127.0.0.1', 'localhost']
 ALLOWED_HOSTS = ['*']
@@ -46,9 +46,6 @@ MIDDLEWARE = [
     
 ]
 
-MIDDLEWARE.insert(2, 'corsheaders.middleware.CorsMiddleware')
-CORS_ALLOW_ALL_ORIGINS = True
-ROOT_URLCONF = 'gsproject.urls'
 
 TEMPLATES = [
     {
@@ -97,25 +94,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LOGGING = {
-       'version': 1,
-       'disable_existing_loggers': False,
-       'handlers': {
-           'console': {
-               'class': 'logging.StreamHandler',
-           },
-       },
-       'root': {
-           'handlers': ['console'],
-           'level': 'WARNING',
-       },
-       'django': {
-           'handlers': ['console'],
-           'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
-           'propagate': False,
-       },
-   }
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
@@ -145,11 +123,4 @@ WHITENOISE_ALLOW_ALL_ORIGINS = True  # Set to True if serving static files from 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-REST_FRAMEWORK = {
-       'DEFAULT_AUTHENTICATION_CLASSES': [
-           'rest_framework.authentication.SessionAuthentication',
-       ],
-       'DEFAULT_PERMISSION_CLASSES': [
-           'rest_framework.permissions.IsAuthenticatedOrReadOnly',
-       ],
-   }
+
