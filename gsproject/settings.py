@@ -76,7 +76,12 @@ os.environ['DATABASE_URL'] = DATABASE_URL
 db_from_env = dj_database_url.config(default=DATABASE_URL, conn_max_age=500)
 DATABASES = {'default': db_from_env}
 
-
+REST_FRAMEWORK = {
+         'DEFAULT_PERMISSION_CLASSES': [
+             'rest_framework.permissions.AllowAny',
+         ],
+     }
+     
 
 AUTH_PASSWORD_VALIDATORS = [
     {

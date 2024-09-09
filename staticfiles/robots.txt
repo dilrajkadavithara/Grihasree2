@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /api/local-area/
+Allow: /api/services/
+Allow: /api/districts/
+Disallow: /admin/
+Disallow: /private/
