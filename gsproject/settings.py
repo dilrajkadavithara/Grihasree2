@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-43e=y$p%0)z=gtb=(5_3hvsgmq7g&(cpk6u&1bp*0bl$fx+ouy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = ['grihasree2.onrender.com', '127.0.0.1', 'localhost']
 ALLOWED_HOSTS = ['*']
@@ -47,6 +47,9 @@ MIDDLEWARE = [
 ]
 
 
+
+ROOT_URLCONF = 'gsproject.urls'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -72,11 +75,7 @@ os.environ['DATABASE_URL'] = DATABASE_URL
 db_from_env = dj_database_url.config(default=DATABASE_URL, conn_max_age=500)
 DATABASES = {'default': db_from_env}
 
-REST_FRAMEWORK = {
-         'DEFAULT_PERMISSION_CLASSES': [
-             'rest_framework.permissions.AllowAny',
-         ],
-     }
+
      
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -123,4 +122,11 @@ WHITENOISE_ALLOW_ALL_ORIGINS = True  # Set to True if serving static files from 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+REST_FRAMEWORK = {
+       'DEFAULT_AUTHENTICATION_CLASSES': [
+           'rest_framework.authentication.SessionAuthentication',
+       ],
+       'DEFAULT_PERMISSION_CLASSES': [
+           'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+       ],
+   }
