@@ -5,7 +5,7 @@ from .serializers import LocalAreaSerializer, ServiceSerializer, DistrictSeriali
 from gsapp.models import LocalArea, Service, District, Lead
 from rest_framework import status
 from django.db import OperationalError
-
+from rest_framework.permissions import AllowAny
 from django.views.generic import DetailView
 
 import logging
@@ -18,30 +18,74 @@ class LeadViewSet(viewsets.ModelViewSet):
     serializer_class = LeadSerializer
 
 class LocalAreaAPIListView(APIView):
-    def get(self, request, district_id):
-        try:
-            local_areas = LocalArea.objects.filter(district_id=district_id)
-            serializer = LocalAreaSerializer(local_areas, many=True)
-            return Response(serializer.data)
-        except (ConnectionError, OperationalError) as e:
-            logger.error(f"Database error: {e}")
-            return Response({'error': 'Database error'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-        except Exception as e:
-            logger.exception(f"Unexpected error: {e}")
-            return Response({'error': 'An unexpected error occurred'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+  permission_classes = [AllowAny]
+
+  def get(self, request, district_id):
+      try:
+          local_areas = LocalArea.objects.filter(district_id=district_id)
+          serializer = LocalAreaSerializer(local_areas, many=True)
+          return Response(serializer.data)
+      except (ConnectionError, OperationalError) as e:
+          logger.error(f"Database error in LocalAreaAPIListView: {e}")
+          return Response(
+              {'error': 'A database error occurred. Please try again later.'},
+              status=status.HTTP_503_SERVICE_UNAVAILABLE
+          )
+      except Exception as e:
+          logger.exception(f"Unexpected error in LocalAreaAPIListView: {e}")
+          return Response(
+              {'error': 'An unexpected error occurred. Please try again later.'},
+              status=status.HTTP_500_INTERNAL_SERVER_ERROR
+          )
+
+  def options(self, request, *args, **kwargs):
+      response = Response()
+      response['Allow'] = 'GET, OPTIONS'
+      response['Content-Type'] = 'application/json'
+      return response
 
 class ServiceAPIListView(APIView):
-    def get(self, request):
-        services = Service.objects.all()
-        serializer = ServiceSerializer(services, many=True)
-        return Response(serializer.data)
+  permission_classes = [AllowAny]
+
+  def get(self, request):
+      try:
+          services = Service.objects.all()
+          serializer = ServiceSerializer(services, many=True)
+          return Response(serializer.data)
+      except Exception as e:
+          logger.exception(f"Unexpected error in ServiceAPIListView: {e}")
+          return Response(
+              {'error': 'An unexpected error occurred. Please try again later.'},
+              status=status.HTTP_500_INTERNAL_SERVER_ERROR
+          )
+
+  def options(self, request, *args, **kwargs):
+      response = Response()
+      response['Allow'] = 'GET, OPTIONS'
+      response['Content-Type'] = 'application/json'
+      return response
 
 class DistrictAPIListView(APIView):
-    def get(self, request):
-        districts = District.objects.all()
-        serializer = DistrictSerializer(districts, many=True)
-        return Response(serializer.data)
+  permission_classes = [AllowAny]
 
+  def get(self, request):
+      try:
+          districts = District.objects.all()
+          serializer = DistrictSerializer(districts, many=True)
+          return Response(serializer.data)
+      except Exception as e:
+          logger.exception(f"Unexpected error in DistrictAPIListView: {e}")
+          return Response(
+              {'error': 'An unexpected error occurred. Please try again later.'},
+              status=status.HTTP_500_INTERNAL_SERVER_ERROR
+          )
+
+  def options(self, request, *args, **kwargs):
+      response = Response()
+      response['Allow'] = 'GET, OPTIONS'
+      response['Content-Type'] = 'application/json'
+      return response
+  
 class SubmitLeadView(APIView):
     def post(self, request):
         logger.debug("Received data:", request.data)
