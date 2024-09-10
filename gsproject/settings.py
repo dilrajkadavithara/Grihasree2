@@ -31,7 +31,6 @@ INSTALLED_APPS = [
     'gsapp',
     'django_extensions',
     'django.contrib.sitemaps',
-    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -45,7 +44,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     
 ]
-
 
 
 ROOT_URLCONF = 'gsproject.urls'
@@ -122,11 +120,3 @@ WHITENOISE_ALLOW_ALL_ORIGINS = True  # Set to True if serving static files from 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-REST_FRAMEWORK = {
-       'DEFAULT_AUTHENTICATION_CLASSES': [
-           'rest_framework.authentication.SessionAuthentication',
-       ],
-       'DEFAULT_PERMISSION_CLASSES': [
-           'rest_framework.permissions.IsAuthenticatedOrReadOnly',
-       ],
-   }
