@@ -45,6 +45,7 @@ MIDDLEWARE = [
     
 ]
 
+SECURE_SSL_REDIRECT = True
 
 ROOT_URLCONF = 'gsproject.urls'
 
